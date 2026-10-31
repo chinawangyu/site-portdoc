@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Port 623 (IPMI / BMC) - What is it &amp; How to Block/Check</title>
 <meta name="description" content="Port 623 (IPMI / BMC): out-of-band server management (IPMI over LAN). Check it with ss/PowerShell and block it with UFW/iptables.">
-<link rel="canonical" href="https://site-portdoc.yuw33278.workers.dev/port/623.html">
+<link rel="canonical" href="https://www.doudoumy.com/port/623.html">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0c0e12" media="(prefers-color-scheme: dark)">
@@ -17,16 +17,16 @@
 <meta property="og:site_name" content="PortAtlas">
 <meta property="og:title" content="Port 623 (IPMI / BMC) - What is it &amp; How to Block/Check">
 <meta property="og:description" content="Port 623 (IPMI / BMC): out-of-band server management (IPMI over LAN). Check it with ss/PowerShell and block it with UFW/iptables.">
-<meta property="og:url" content="https://site-portdoc.yuw33278.workers.dev/port/623.html">
-<meta property="og:image" content="https://site-portdoc.yuw33278.workers.dev/og.png">
+<meta property="og:url" content="https://www.doudoumy.com/port/623.html">
+<meta property="og:image" content="https://www.doudoumy.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="PortAtlas network port reference">
-<meta property="article:modified_time" content="2026-10-30">
+<meta property="article:modified_time" content="2026-10-31">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Port 623 (IPMI / BMC)">
 <meta name="twitter:description" content="Port 623 (IPMI / BMC): out-of-band server management (IPMI over LAN). Check it with ss/PowerShell and block it with UFW/iptables.">
-<meta name="twitter:image" content="https://site-portdoc.yuw33278.workers.dev/og.png">
+<meta name="twitter:image" content="https://www.doudoumy.com/og.png">
 <style>
 *,*::before,*::after{box-sizing:border-box}
 :root{
@@ -270,7 +270,7 @@ footer a:hover{color:var(--brand-ink)}
   a{color:#000;text-decoration:underline}
 }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","about":{"@type":"Service","description":"IPMI and BMC controllers commonly listen on UDP 623; the IANA registry lists asf-rmcp for that protocol and oob-ws-http for TCP.","name":"IPMI / BMC"},"articleSection":"Web and HTTP","author":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://site-portdoc.yuw33278.workers.dev/apple-touch-icon.png"},"name":"PortAtlas","url":"https://site-portdoc.yuw33278.workers.dev/"},"dateModified":"2026-10-30","datePublished":"2026-10-30","description":"Port 623 (IPMI / BMC): out-of-band server management (IPMI over LAN). Check it with ss/PowerShell and block it with UFW/iptables.","headline":"Port 623 (IPMI / BMC) - What it is and how to check or block it","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://site-portdoc.yuw33278.workers.dev/"},"keywords":["port 623","IPMI / BMC port","check port 623","block port 623","tcp port 623","udp port 623"],"mainEntityOfPage":{"@id":"https://site-portdoc.yuw33278.workers.dev/port/623.html","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://site-portdoc.yuw33278.workers.dev/apple-touch-icon.png"},"name":"PortAtlas","url":"https://site-portdoc.yuw33278.workers.dev/"},"url":"https://site-portdoc.yuw33278.workers.dev/port/623.html"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"Port 623 (IPMI / BMC). The IANA registry assigns a different service on each transport protocol: TCP oob-ws-http; UDP asf-rmcp. IPMI and BMC controllers commonly listen on UDP 623; the IANA registry lists asf-rmcp for that protocol and oob-ws-http for TCP."},"name":"What is port 623 used for?"},{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"On Linux run `sudo ss -tlpn 'sport = :623'` and `sudo ss -ulpn 'sport = :623'`. On Windows run `Get-NetTCPConnection -LocalPort 623 -State Listen -ErrorAction SilentlyContinue` and `Get-NetUDPEndpoint -LocalPort 623 -ErrorAction SilentlyContinue` in PowerShell. If the port is open, the output shows a process listening on port 623; empty output usually means nothing is bound to it."},"name":"How do I check if port 623 is open?"},{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"With UFW run `sudo ufw deny 623/tcp` and `sudo ufw deny 623/udp`. With iptables run `sudo iptables -A INPUT -p tcp --dport 623 -j DROP` and `sudo iptables -A INPUT -p udp --dport 623 -j DROP`. Persist the iptables rules with your distribution's netfilter-persistent or iptables-save tooling so they survive a reboot."},"name":"How do I block port 623?"},{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"IPMI and BMC out-of-band management frequently ships with default credentials and weak cipher suites. Keep it on a dedicated management VLAN. Nevertheless, treat this port as sensitive. Restrict it to trusted networks or a VPN, require authentication and logging, and never expose it directly to the public internet without a hardened gateway in front."},"name":"Is port 623 safe to expose?"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://site-portdoc.yuw33278.workers.dev/","name":"Ports","position":1},{"@type":"ListItem","item":"https://site-portdoc.yuw33278.workers.dev/category/web.html","name":"Web and HTTP","position":2},{"@type":"ListItem","item":"https://site-portdoc.yuw33278.workers.dev/port/623.html","name":"Port 623 (IPMI / BMC)","position":3}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","about":{"@type":"Service","description":"IPMI and BMC controllers commonly listen on UDP 623; the IANA registry lists asf-rmcp for that protocol and oob-ws-http for TCP.","name":"IPMI / BMC"},"articleSection":"Web and HTTP","author":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.doudoumy.com/apple-touch-icon.png"},"name":"PortAtlas","url":"https://www.doudoumy.com/"},"dateModified":"2026-10-31","datePublished":"2026-10-31","description":"Port 623 (IPMI / BMC): out-of-band server management (IPMI over LAN). Check it with ss/PowerShell and block it with UFW/iptables.","headline":"Port 623 (IPMI / BMC) - What it is and how to check or block it","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://www.doudoumy.com/"},"keywords":["port 623","IPMI / BMC port","check port 623","block port 623","tcp port 623","udp port 623"],"mainEntityOfPage":{"@id":"https://www.doudoumy.com/port/623.html","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.doudoumy.com/apple-touch-icon.png"},"name":"PortAtlas","url":"https://www.doudoumy.com/"},"url":"https://www.doudoumy.com/port/623.html"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"Port 623 (IPMI / BMC). The IANA registry assigns a different service on each transport protocol: TCP oob-ws-http; UDP asf-rmcp. IPMI and BMC controllers commonly listen on UDP 623; the IANA registry lists asf-rmcp for that protocol and oob-ws-http for TCP."},"name":"What is port 623 used for?"},{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"On Linux run `sudo ss -tlpn 'sport = :623'` and `sudo ss -ulpn 'sport = :623'`. On Windows run `Get-NetTCPConnection -LocalPort 623 -State Listen -ErrorAction SilentlyContinue` and `Get-NetUDPEndpoint -LocalPort 623 -ErrorAction SilentlyContinue` in PowerShell. If the port is open, the output shows a process listening on port 623; empty output usually means nothing is bound to it."},"name":"How do I check if port 623 is open?"},{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"With UFW run `sudo ufw deny 623/tcp` and `sudo ufw deny 623/udp`. With iptables run `sudo iptables -A INPUT -p tcp --dport 623 -j DROP` and `sudo iptables -A INPUT -p udp --dport 623 -j DROP`. Persist the iptables rules with your distribution's netfilter-persistent or iptables-save tooling so they survive a reboot."},"name":"How do I block port 623?"},{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"IPMI and BMC out-of-band management frequently ships with default credentials and weak cipher suites. Keep it on a dedicated management VLAN. Nevertheless, treat this port as sensitive. Restrict it to trusted networks or a VPN, require authentication and logging, and never expose it directly to the public internet without a hardened gateway in front."},"name":"Is port 623 safe to expose?"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://www.doudoumy.com/","name":"Ports","position":1},{"@type":"ListItem","item":"https://www.doudoumy.com/category/web.html","name":"Web and HTTP","position":2},{"@type":"ListItem","item":"https://www.doudoumy.com/port/623.html","name":"Port 623 (IPMI / BMC)","position":3}]}]}</script>
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-23X5Z4T46B"></script>
@@ -303,7 +303,7 @@ footer a:hover{color:var(--brand-ink)}
 <main class="wrap" id="main">
   <nav class="crumbs" aria-label="Breadcrumb">
     <a href="../index.html">Ports</a>
-    <span aria-hidden="true">/</span> <a href="https://site-portdoc.yuw33278.workers.dev/category/web.html">Web and HTTP</a>
+    <span aria-hidden="true">/</span> <a href="https://www.doudoumy.com/category/web.html">Web and HTTP</a>
     <span aria-hidden="true">/</span> <span aria-current="page">623</span>
   </nav>
 
@@ -337,7 +337,7 @@ footer a:hover{color:var(--brand-ink)}
     <p>Each transport reaches a different service on this number, so match the protocol to the service you are diagnosing. A TCP check says nothing about a UDP listener on the same port, and the reverse is also true. Both transports still bind to the same number, which is why two processes can collide even when they use different protocols.</p>
     <p>Use the commands below to confirm whether port 623 is actually in use before you change firewall rules. Blocking the port stops new inbound traffic at the firewall, but it does not stop a local process from listening, and it does not remove the service from the machine.</p>
     
-    <p><a class="catlink" href="https://site-portdoc.yuw33278.workers.dev/category/web.html">Browse all Web and HTTP ports</a></p>
+    <p><a class="catlink" href="https://www.doudoumy.com/category/web.html">Browse all Web and HTTP ports</a></p>
     <p class="note">Source: IANA Service Name and Transport Protocol Port Number Registry. Registered assignee: [Jim_Davis].</p>
   </section>
 
@@ -429,7 +429,7 @@ sudo iptables -A INPUT -p udp --dport 623 -j DROP</code><button class="copy" typ
           <tr><th scope="row">Aliases</th><td><code>asf-rmcp</code></td></tr>
           <tr><th scope="row">Transport protocol</th><td>TCP / UDP</td></tr>
           <tr><th scope="row">Assignments by protocol</th><td><ul class="assign"><li><code>TCP</code> oob-ws-http &mdash; DMTF out-of-band web services management protocol</li><li><code>UDP</code> asf-rmcp &mdash; ASF Remote Management and Control Protocol</li></ul></td></tr>
-          <tr><th scope="row">Category</th><td><a href="https://site-portdoc.yuw33278.workers.dev/category/web.html">Web and HTTP</a></td></tr>
+          <tr><th scope="row">Category</th><td><a href="https://www.doudoumy.com/category/web.html">Web and HTTP</a></td></tr>
           <tr><th scope="row">Range</th><td>Well-known port (0–1023)</td></tr>
           <tr><th scope="row">Risk level</th><td>High</td></tr>
           <tr><th scope="row">Registered assignee</th><td>[Jim_Davis]</td></tr>
@@ -484,13 +484,13 @@ sudo iptables -A INPUT -p udp --dport 623 -j DROP</code><button class="copy" typ
       <li><a href="765.html"><span class="n">Port 765 · webster</span><span class="d"></span></a></li>
       
     </ul>
-    <p style="margin-top:14px"><a class="catlink" href="https://site-portdoc.yuw33278.workers.dev/category/web.html">See all Web and HTTP ports</a></p>
+    <p style="margin-top:14px"><a class="catlink" href="https://www.doudoumy.com/category/web.html">See all Web and HTTP ports</a></p>
   </section>
   
 
   <div class="sources">
     <p>Primary data: <a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml" rel="noopener">IANA Service Name and Transport Protocol Port Number Registry</a>.</p>
-    <p class="updated">Last reviewed 2026-10-30 · <a href="../methodology.html">Methodology</a> · <a href="../about.html">About</a> · <a href="../privacy.html">Privacy</a></p>
+    <p class="updated">Last reviewed 2026-10-31 · <a href="../methodology.html">Methodology</a> · <a href="../about.html">About</a> · <a href="../privacy.html">Privacy</a></p>
   </div>
 </main>
 
