@@ -35,7 +35,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Doudoumy network port reference">
-<meta property="article:modified_time" content="2026-10-31">
+<meta property="article:modified_time" content="2026-11-05">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Port 8067 (INFI-ASYNC)">
 <meta name="twitter:description" content="Port 8067 (INFI-ASYNC): Infinidat async replication. Free, no signup, browser-local privacy. Check with ss/PowerShell, then block it with UFW.">
@@ -143,6 +143,12 @@ h1 .svc{display:inline-block;font-family:var(--mono);font-size:.28em;font-weight
 .jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .jump a{font-size:13px;color:var(--ink-soft);background:var(--bg-soft);border:1px solid var(--line);border-radius:999px;padding:4px 11px}
 .jump a:hover{color:var(--brand-ink);border-color:var(--line-strong);text-decoration:none}
+.tool-strip{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:16px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg-elev)}
+.tool-strip-label{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-ink);margin-right:2px}
+.tool-strip a{display:flex;flex-direction:column;gap:1px;padding:6px 11px;border:1px solid var(--line);border-radius:6px;background:var(--bg-soft);color:var(--ink)}
+.tool-strip a b{font-size:13px;font-weight:600}
+.tool-strip a span{font-size:11.5px;color:var(--muted)}
+.tool-strip a:hover{border-color:var(--line-strong);text-decoration:none}
 .keyfacts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}
 .fact{border:1px solid var(--line);border-radius:var(--radius);background:var(--bg-elev);padding:12px 14px}
 .fact span{display:block;font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
@@ -502,7 +508,7 @@ footer a:hover{color:var(--brand-ink)}
   .tool-out dd{margin-bottom:10px}
 }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","about":{"@type":"Service","description":"Infinidat async replication","name":"infi-async"},"author":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.doudoumy.com/apple-touch-icon.png"},"name":"Doudoumy","url":"https://www.doudoumy.com/"},"dateModified":"2026-10-31","datePublished":"2026-10-31","description":"Port 8067 (INFI-ASYNC): Infinidat async replication. Free, no signup, browser-local privacy. Check with ss/PowerShell, then block it with UFW.","headline":"Port 8067 (INFI-ASYNC) - What it is and how to check or block it","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://www.doudoumy.com/"},"keywords":["port 8067","infi-async port","check port 8067","block port 8067","tcp port 8067"],"mainEntityOfPage":{"@id":"https://www.doudoumy.com/port/8067.html","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.doudoumy.com/apple-touch-icon.png"},"name":"Doudoumy","url":"https://www.doudoumy.com/"},"url":"https://www.doudoumy.com/port/8067.html"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"Port 8067 (INFI-ASYNC) uses TCP. Infinidat async replication."},"name":"What is port 8067 used for?"},{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"On Linux run `sudo ss -tlpn 'sport = :8067'`. On Windows run `Get-NetTCPConnection -LocalPort 8067 -State Listen -ErrorAction SilentlyContinue` in PowerShell. If the port is open, the output shows a process listening on port 8067; empty output usually means nothing is bound to it."},"name":"How do I check if port 8067 is open?"},{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"With UFW run `sudo ufw deny 8067/tcp`. With iptables run `sudo iptables -A INPUT -p tcp --dport 8067 -j DROP`. Persist the iptables rules with your distribution's netfilter-persistent or iptables-save tooling so they survive a reboot."},"name":"How do I block port 8067?"},{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"This port is not on our curated list of services with a widely exploited profile. Exposure is only safe when the listening service is intended, patched and protected by a firewall. Nevertheless, keep the listening service patched and remove it if unused. A default-deny firewall policy with explicit allow rules is still the safest baseline."},"name":"Is port 8067 safe to expose?"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://www.doudoumy.com/","name":"Home","position":1},{"@type":"ListItem","item":"https://www.doudoumy.com/port/8067.html","name":"Port 8067 (INFI-ASYNC)","position":2}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","about":{"@type":"Service","description":"Infinidat async replication","name":"infi-async"},"author":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.doudoumy.com/apple-touch-icon.png"},"name":"Doudoumy","url":"https://www.doudoumy.com/"},"dateModified":"2026-11-05","datePublished":"2026-11-05","description":"Port 8067 (INFI-ASYNC): Infinidat async replication. Free, no signup, browser-local privacy. Check with ss/PowerShell, then block it with UFW.","headline":"Port 8067 (INFI-ASYNC) - What it is and how to check or block it","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://www.doudoumy.com/"},"keywords":["port 8067","infi-async port","check port 8067","block port 8067","tcp port 8067"],"mainEntityOfPage":{"@id":"https://www.doudoumy.com/port/8067.html","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.doudoumy.com/apple-touch-icon.png"},"name":"Doudoumy","url":"https://www.doudoumy.com/"},"url":"https://www.doudoumy.com/port/8067.html"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"Port 8067 (INFI-ASYNC) uses TCP. Infinidat async replication."},"name":"What is port 8067 used for?"},{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"On Linux run `sudo ss -tlpn 'sport = :8067'`. On Windows run `Get-NetTCPConnection -LocalPort 8067 -State Listen -ErrorAction SilentlyContinue` in PowerShell. If the port is open, the output shows a process listening on port 8067; empty output usually means nothing is bound to it."},"name":"How do I check if port 8067 is open?"},{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"With UFW run `sudo ufw deny 8067/tcp`. With iptables run `sudo iptables -A INPUT -p tcp --dport 8067 -j DROP`. Persist the iptables rules with your distribution's netfilter-persistent or iptables-save tooling so they survive a reboot."},"name":"How do I block port 8067?"},{"@type":"Question","acceptedAnswer":{"@type":"Answer","text":"This port is not on our curated list of services with a widely exploited profile. Exposure is only safe when the listening service is intended, patched and protected by a firewall. Nevertheless, keep the listening service patched and remove it if unused. A default-deny firewall policy with explicit allow rules is still the safest baseline."},"name":"Is port 8067 safe to expose?"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://www.doudoumy.com/","name":"Home","position":1},{"@type":"ListItem","item":"https://www.doudoumy.com/port/8067.html","name":"Port 8067 (INFI-ASYNC)","position":2}]}]}</script>
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-23X5Z4T46B"></script>
@@ -559,6 +565,7 @@ footer a:hover{color:var(--brand-ink)}
       <div class="jump">
         <a href="#commands">Check and block</a>
         <a href="#risk">Is it safe?</a>
+        <a href="#ops">Production setup</a>
         
         <a href="#troubleshooting">Troubleshooting</a>
         <a href="#faq">FAQ</a>
@@ -569,6 +576,16 @@ footer a:hover{color:var(--brand-ink)}
       <div class="fact"><span>Risk</span><b class="risk-low">Standard/Low</b></div>
       <div class="fact"><span>Typical use</span><b>Application services</b></div>
     </div>
+    
+    
+    
+    <div class="tool-strip">
+      <span class="tool-strip-label">Free browser tools</span>
+      <a href="../tools/subnet-calculator.html"><b>Subnet Calculator</b><span>Network, broadcast and usable host range</span></a>
+      <a href="../tools/index.html"><b>All developer tools</b><span>Every browser utility, no signup</span></a>
+    </div>
+    
+    
   </section>
 
   <section class="block prose" aria-labelledby="what">
@@ -631,6 +648,39 @@ footer a:hover{color:var(--brand-ink)}
       </div>
     </div>
   </section>
+
+  
+  <section class="block" aria-labelledby="ops">
+    <h2 id="ops">Production setup and tools for port 8067</h2>
+    <p class="section-lede">Infinidat async replication (infi-async) is a vendor service, and there is no public daemon configuration to copy. The operational task is to prove what owns 8067, then restrict it to the replication peer.</p>
+    
+    <div class="demo">
+      <div class="demo-head">
+        <span class="demo-tag">Firewall</span>
+        <h3>Allow only the replication peer</h3>
+      </div>
+      <div class="demo-code">
+        <pre><code># Allow the replication peer only, then deny everyone else
+sudo ufw allow from 10.0.0.20 to any port 8067 proto tcp
+sudo ufw deny 8067/tcp</code></pre>
+        <button class="copy" type="button" data-copy aria-label="Copy the production configuration">Copy</button>
+      </div>
+    </div>
+    
+    <p class="note">Confirm the peer address and the documented port list with Infinidat before deploying. Do not open 8067 to 0.0.0.0/0; the service holds replication data and has no public hardening guide.</p>
+    
+    <h3>Commands network and ops teams use</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th scope="col">Tool</th><th scope="col">Command</th><th scope="col">Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>ss</td><td><code>ss -tlpn &#39;sport = :8067&#39;</code></td><td>Find the local process and the address it bound.</td></tr><tr><td>lsof</td><td><code>sudo lsof -i :8067</code></td><td>Cross-check which process owns the socket.</td></tr><tr><td>nmap</td><td><code>nmap -sV -p 8067 10.0.0.20</code></td><td>Fingerprint the peer service before opening a rule.</td></tr><tr><td>tcpdump</td><td><code>sudo tcpdump -ni any tcp port 8067</code></td><td>Observe the replication session and confirm the peer.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </section>
+  
 
   
 
@@ -739,7 +789,7 @@ footer a:hover{color:var(--brand-ink)}
 
   <div class="sources">
     <p>Primary data: <a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml" rel="noopener">IANA Service Name and Transport Protocol Port Number Registry</a>.</p>
-    <p class="updated">Last reviewed 2026-10-31 · <a href="../methodology.html">Methodology</a> · <a href="../about.html">About</a> · <a href="../privacy.html">Privacy</a></p>
+    <p class="updated">Last reviewed 2026-11-05 · <a href="../methodology.html">Methodology</a> · <a href="../about.html">About</a> · <a href="../privacy.html">Privacy</a></p>
   </div>
 </main>
 
